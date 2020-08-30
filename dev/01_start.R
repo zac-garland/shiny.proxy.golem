@@ -33,9 +33,34 @@ usethis::use_readme_rmd( open = FALSE )
 usethis::use_code_of_conduct()
 usethis::use_lifecycle_badge( "Experimental" )
 usethis::use_news_md( open = FALSE )
-
-## Use git ----
 usethis::use_git()
+
+
+
+# zg edits
+zgtools::zg_core_libs()
+
+get_project_name <- function(){
+  list.files(pattern = "proj") %>% 
+    str_replace("\\.Rproj","")
+  
+}
+
+
+read_lines("Readme.Rmd") %>% 
+  tibble(line = .) %>% 
+  print(n = nrow(.)) %>% 
+  slice(1:24) %>% 
+  filter(!str_detect(line,"The goal")) %>% 
+  add_row(line = "  eval = FALSE,",.before = 11) %>% 
+  pull(line) %>% 
+  c("```{r}",
+    paste0("devtools::install_github('zac-garland/",get_project_name(),"')","\n","```")) %>% 
+  write_lines("Readme.Rmd")
+
+
+
+
 
 ## Init Testing Infrastructure ----
 ## Create a template for tests

@@ -59,6 +59,11 @@ writeLines(
 ## Code coverage ----
 ## (You'll need GitHub there)
 usethis::use_github()
+
+gert::git_add(".")
+gert::git_commit_all(message = "initial commit")
+gert::git_push()
+
 # usethis::use_travis()
 # usethis::use_appveyor()
 
