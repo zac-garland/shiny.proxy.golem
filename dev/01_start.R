@@ -47,7 +47,7 @@ get_project_name <- function(){
 }
 
 
-read_lines("Readme.Rmd") %>% 
+read_lines("README.Rmd") %>% 
   tibble(line = .) %>% 
   print(n = nrow(.)) %>% 
   slice(1:24) %>% 
@@ -56,9 +56,9 @@ read_lines("Readme.Rmd") %>%
   pull(line) %>% 
   c("```{r}",
     paste0("devtools::install_github('zac-garland/",get_project_name(),"')","\n","```")) %>% 
-  write_lines("Readme.Rmd")
+  write_lines("README.Rmd")
 
-
+rmarkdown::render("README.Rmd")
 
 
 
