@@ -10,7 +10,8 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # List the first level UI elements here 
     fluidPage(
-      h1("shiny.proxy.golem")
+      h1("shiny.proxy.golem"),
+      mod_test_ui("counter1", "Counter #1")
     )
   )
 }
