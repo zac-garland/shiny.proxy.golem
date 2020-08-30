@@ -60,14 +60,12 @@ writeLines(
 ## (You'll need GitHub there)
 usethis::use_github()
 
-gert::git_add(".")
-gert::git_commit_all(message = "initial commit")
-gert::git_push()
 
 # usethis::use_travis()
 # usethis::use_appveyor()
 
 # You're now set! ----
 # go to dev/03_deploy.R
+rstudioapi::navigateToFile("dev/run_dev.R")
 rstudioapi::navigateToFile("dev/03_deploy.R")
 

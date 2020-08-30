@@ -26,3 +26,8 @@ devtools::check()
 ## If you want to deploy to ShinyProxy
 golem::add_dockerfile_shinyproxy()
 
+
+
+gert::git_add(".")
+gert::git_commit_all(message = "initial commit")
+gert::git_push()
