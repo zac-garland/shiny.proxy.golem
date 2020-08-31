@@ -67,7 +67,7 @@ rmarkdown::render("README.Rmd")
 golem::use_recommended_tests()
 
 ## Use Recommended Packages ----
-# golem::use_recommended_deps()
+golem::use_recommended_deps(recommended = c("shiny","golem","tidyverse","htmltools"))
 
 ## Favicon ----
 # If you want to change the favicon (default is golem's one)

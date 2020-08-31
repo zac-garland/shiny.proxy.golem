@@ -6,8 +6,9 @@ Description: A minimal application for testing shiny proxy and golem.
 License: MIT + file LICENSE
 Imports: 
     config,
+    golem,
     shiny,
-    zgtools (>= 0.0.0.9000)
+    tidyverse
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
