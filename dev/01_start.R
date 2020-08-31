@@ -28,11 +28,11 @@ golem::set_golem_options()
 
 ## Create Common Files ----
 ## See ?usethis for more information
-usethis::use_mit_license( name = "Golem User" )  # You can set another license here
+usethis::use_mit_license( name = "Zac Garland" )  # You can set another license here
 usethis::use_readme_rmd( open = FALSE )
 usethis::use_code_of_conduct()
 usethis::use_lifecycle_badge( "Experimental" )
-usethis::use_news_md( open = FALSE )
+# usethis::use_news_md( open = FALSE )
 usethis::use_git()
 
 
@@ -64,7 +64,7 @@ rmarkdown::render("README.Rmd")
 
 ## Init Testing Infrastructure ----
 ## Create a template for tests
-golem::use_recommended_tests()
+# golem::use_recommended_tests()
 
 ## Use Recommended Packages ----
 golem::use_recommended_deps(recommended = c("shiny","golem","tidyverse","htmltools"))
